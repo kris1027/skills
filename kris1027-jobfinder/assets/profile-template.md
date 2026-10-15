@@ -1,7 +1,14 @@
 # Profil wyszukiwania
 
-## Czego szukam
-- Stanowiska:
+## Kierunki od użytkownika
+<!-- to, co użytkownik sam wymienił, w kolejności priorytetu; bez pokrycia w CV → [zmiana kierunku] -->
+1.
+
+## Propozycje z CV
+<!-- stanowiska wynikające z CV, zatwierdzone przez użytkownika -->
+-
+
+## Warunki
 - Poziom (junior/mid/senior):
 - Lokalizacja / tryb (zdalnie, hybrydowo, miasto):
 - Widełki (min.):

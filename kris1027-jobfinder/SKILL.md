@@ -31,28 +31,40 @@ JobFinder/
 
    Możesz otworzyć folder w Finderze: `open ~/Desktop/JobFinder/cv`. Bez CV nie da się sensownie dopasowywać ofert, więc nie zgaduj — poczekaj. Jeśli jest tylko jedna wersja, powiedz o tym i zapytaj, czy działać na jednej.
 3. **Przeczytaj stan:** `PROGRESS.md`, `profile.md`, `applications.json`, ostatni plik z `sessions/`.
-4. **Przywitaj się konkretnym podsumowaniem** (kilka linijek): co zrobiliśmy ostatnio, ile aplikacji w jakim statusie, które czekają na follow-up (status `wyslane`, ≥ 7 dni od `sent_date`, bez `followup_done`), co było zaplanowane na dziś. Zaproponuj pierwszy krok.
+4. **Przywitaj się konkretnym podsumowaniem** (kilka linijek): co zrobiliśmy ostatnio, ile aplikacji w jakim statusie, które czekają na follow-up (status `wyslane`, ≥ 7 dni od `sent_date`, bez `followup_done`), co było zaplanowane na dziś. Dodaj jedną linijkę potwierdzenia kierunków z `profile.md` (np. „Szukamy dalej: Frontend, UX Designer — coś się zmieniło?”). Zaproponuj pierwszy krok.
+5. Jeśli `profile.md` istnieje, ale nie ma sekcji „Kierunki od użytkownika” (stary profil) — zadaj pytanie otwierające z kroku 2, a dotychczasowe „Stanowiska” przenieś do „Propozycji z CV”.
 
 ## 2. Profil (pierwsza sesja lub gdy niepełny)
 
-Jeśli `profile.md` nie istnieje, skopiuj szablon z `assets/profile-template.md` w katalogu skilla i wypełnij, co się da, z CV: stanowiska, poziom, technologie/branża, miasto, podpis (imię, nazwisko, telefon, linki). Pokaż użytkownikowi i dopytaj o resztę: tryb pracy, widełki, typ umowy, wykluczenia, listę portali (dopasuj domyślną do branży — np. justjoin/nofluffjobs/theprotocol to IT, dla innych branż raczej pracuj.pl, olx, rocketjobs).
+Jeśli `profile.md` nie istnieje, skopiuj szablon z `assets/profile-template.md` w katalogu skilla.
+
+**Najpierw zapytaj o zainteresowania — zanim zajrzysz do CV.** Propozycje wyprowadzone z CV zakotwiczają rozmowę i użytkownik zwykle tylko je zatwierdza, a wtedy szukamy wyłącznie „tego samego co dotąd”. Zapytaj:
+> Zanim zajrzę do CV: jakie prace Cię interesują? Wypisz wszystko — także rzeczy, w których nie masz doświadczenia. I czego na pewno nie chcesz robić?
+
+Odpowiedź zapisz w „Kierunkach od użytkownika” w kolejności priorytetu (zapytaj o kolejność, jeśli nie wynika z odpowiedzi). Kierunki bez pokrycia w CV oznacz `[zmiana kierunku]`. To, czego użytkownik nie chce, trafia do „Wykluczeń”.
+
+Dopiero potem przeczytaj CV i wypełnij resztę: poziom, technologie/branża, miasto, podpis (imię, nazwisko, telefon, linki). Stanowiska wynikające z CV, których użytkownik nie wymienił, zaproponuj — do „Propozycji z CV” trafiają tylko te zatwierdzone. Pokaż profil i dopytaj o resztę: tryb pracy, widełki, typ umowy, wykluczenia, listę portali (dopasuj domyślną do branży — np. justjoin/nofluffjobs/theprotocol to IT, dla innych branż raczej pracuj.pl, olx, rocketjobs).
 
 Zapytaj też o **formę gramatyczną** do maili („pracowałem” / „pracowałam” / formy neutralne). Polski wymusza rodzaj w czasownikach, a imię go nie przesądza — nie zgaduj, zapisz odpowiedź w profilu.
 
 ## 3. Szukanie ofert
 
 - Szukaj na portalach z `profile.md` (WebSearch / WebFetch, a gdy portal wymaga JS — przeglądarka). Filtruj według profilu.
+- Szukaj dla każdego kierunku z „Kierunków od użytkownika” i zatwierdzonych „Propozycji z CV”. Każdy kierunek od użytkownika dostaje minimum 2–3 oferty z dziesięciu (jeśli tyle się znajdzie), resztę dziel według priorytetu. Inaczej kierunki dobrze pokryte przez CV wyprą resztę. Użytkownik może to nadpisać („dziś tylko UX”).
 - Pomijaj oferty, których URL jest już w `seen_offers`, oraz firmy, do których aplikowano w ostatnich 30 dniach (porównuj nazwę firmy luźno: „ABC Sp. z o.o.” = „ABC”). Przy pominiętej firmie możesz krótko o tym wspomnieć.
 - Zbierz do **10 najlepiej dopasowanych** ofert. Dopisz wszystkie pokazane URL-e do `seen_offers`, żeby kolejne „szukaj dalej” dawało nowe wyniki.
-- Oceń dopasowanie 1–5 względem CV i profilu (wymagania vs doświadczenie, poziom, lokalizacja, widełki).
+- Oceń dopasowanie 1–5 względem CV i profilu (wymagania vs doświadczenie, poziom, lokalizacja, widełki). Gwiazdki mówią uczciwie o szansach z obecnym CV — nie podbijaj ich za zainteresowanie. O kolejności decyduje priorytet kierunku: sortuj najpierw po nim, potem po gwiazdkach.
 
 Pokaż listę w tym formacie i **czekaj na decyzję**:
 
 ```
-1. Firma X — Frontend Developer (Warszawa / hybryda, 15–20k B2B) ★★★★☆ [sugestia: EN]
+1. [Kierunek: Frontend] Firma X — Frontend Developer (Warszawa / hybryda, 15–20k B2B) ★★★★☆ [sugestia: EN]
    Pasuje: 3 lata React + TypeScript, dokładnie ich stack.
    Kanał: mail rekrutacja@x.pl | https://link-do-oferty
-2. ...
+2. [Kierunek: UX — zmiana kierunku] Firma Y — Junior UX Designer (zdalnie, 8–10k UoP) ★★☆☆☆ [sugestia: PL]
+   Pasuje: projektowanie interfejsów we frontendzie, współpraca z designerami; brak portfolio UX.
+   Kanał: mail kariera@y.pl | https://link-do-oferty
+3. ...
 ```
 
 Sugestia języka: ogłoszenie po angielsku lub firma zagraniczna → EN, w przeciwnym razie PL. To tylko podpowiedź — **wersję CV wybiera użytkownik** (odpowie np. „1 PL, 3 EN”). Bez wskazania wersji nie twórz szkicu.
@@ -71,7 +83,7 @@ Dla każdej zatwierdzonej oferty ustal, jak aplikować:
 - powitanie: „Dzień dobry,” (EN: „Hello,” / „Dear Hiring Team,”); „na Ty” tylko gdy ogłoszenie jest tak pisane;
 - kim jest użytkownik i na jakie stanowisko aplikuje (z nazwą stanowiska z ogłoszenia);
 - jeden konkret: dlaczego ta firma/rola (coś z ogłoszenia albo strony firmy, nie ogólnik);
-- 1–2 doświadczenia z CV, które odpowiadają wymaganiom;
+- 1–2 doświadczenia z CV, które odpowiadają wymaganiom; przy ofercie `[zmiana kierunku]` — umiejętności przenośne z CV i motywacja do zmiany, bez sugerowania doświadczenia w nowej roli, którego nie ma;
 - CV w załączniku, prośba o kontakt, podpis z `profile.md`;
 - forma gramatyczna z profilu;
 - jeśli ogłoszenie wymaga konkretnej klauzuli RODO — wklej ją dosłownie z ogłoszenia na końcu maila.
